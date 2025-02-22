@@ -38,7 +38,7 @@ module.exports = {
      
     ],
     sidebarDepth: 1,
-    repo: 'WimDejonghe/iot-lab-complete',
+    repo: 'WimDejonghe/iot-lab-complete-python',
     docsDir: 'docs',
     docsBranch: 'main'
   }),
