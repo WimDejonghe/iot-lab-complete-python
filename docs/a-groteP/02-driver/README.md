@@ -68,3 +68,28 @@ De stator van een stappenmotor bestaat uit 4 spoelen. Bij een bipolaire stappenm
 Van een unipolaire stappenmotor kan je altijd een bipolaire stappenmotor maken door de midden aftakkingen van de twee spoelen niet te gebruiken. Bij een stappenmotor kan je gebruik maken van een H-brug zoals verder in het hoofdstuk gebruikt wordt bij het aansturen van een DC-motor.
 Unipolaire stappenmotoren ga je aansturen met MOSFETs die beveiligd zijn met vrijloopdioden. Hiervoor kan je de ULN2803A gebruiken.
 
+### Schema hardware
+
+Via een microcontroler gaan we een stappenmotor aansturen. De stappenmotor die wij gaan gebruiken is een NEMA 17-formaat hybride stappenmotor die gebruikt kan worden als een unipolaire of bipolaire stappenmotor en heeft een staphoek van 1,8 ° (200 stappen per omwenteling). Elke fase trekt 1,2A bij 4V, waardoor een houdkoppel van 3,2 kg-cm (44 oz-in) mogelijk is.
+Het is een stappenmotor met referentie SY42STH47-1206A van de firma Pololu waarvan de belangrijkste gegevens in zijn afgebeeld.
+
+![example image](./images/stepper8.png "An exemplary image")
+
+Het schema is weergeven in Figuur 32. Neem de ESP32 feather van Adafruit en plaats er de ESP32-shield op. De twee drukknoppen en de 4 leds van het schema staan op de ESP32-shield. De drukknoppen worden gebruikt om de draairichting in te stellen en om de motor wel of niet te laten draaien. De leds dienen als controle als de fasen juist aangestuurd worden.
+De ULN2803 is een 8-voudige darlingtondriver die gebruikt wordt om de unipolaire stappenmotor aan te sturen. De microcontroller mag maximum 20mA sinken of sourcen en de stappenmotor laat een stroom per fase vloeien van 1,2A met een spanning van 4V, wat veel te hoog is om rechtstreeks aan te sluiten.
+Om de stappenmotor te voeden gebruik je een labovoeding en deze stel je in op 4V.
+
+![example image](./images/schema.png "An exemplary image")
+
+### Stappenmotor in Normale mode
+
+![example image](./images/time1.png "An exemplary image")
+
+Eerst gaan we fase 1 hoog maken en al de andere fasen laag. Vervolgens wordt fase 2 hoog gemaakt
+en alle andere fasen laag. Zo gaan we een cyclus maken zodat ieder fase eens hoog wordt terwijl alle
+andere fasen laag zijn.
+Iedere keer er een andere index wordt uitgevoerd zal de stappenmotor een klein stapje verdraaien.
+Door de tijd van de index aan te passen zal de stappenmotor vlugger of trager draaien.
+Door de indexen oplopend (= 1,2,3,4, …) uit te voeren zal de stappenmotor in wijzerszin draaien.
+Door de indexen aflopend (= 4,3,2,1, …) uit te voeren zal de stappenmotor in tegenwijzerszin draaien.
+In Figuur 34 is een samenvatting gemaakt van de 4 verschillende indexen.
