@@ -1,19 +1,25 @@
 {
-  "name": "starter-cursus",
+  "name": "iot-lab-complete-python",
   "version": "1.0.0",
-  "description": "",
+  "description": "Dit is tekst voor de Github\r korte beschrijving van de cursus.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "author": "Wim",
+  "author": "Wim Dejonghe",
   "license": "MIT",
   "devDependencies": {
     "@vuepress/plugin-container": "^2.0.0-beta.67",
     "@vuepress/plugin-register-components": "^2.0.0-beta.67",
-    "vuepress": "^2.0.0-beta.67",
-    "vuepress-plugin-mathjax": "^1.2.8"
+    "markdown-it-mathjax3": "^4.3.2",
+    "vuepress": "^2.0.0-beta.67"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WimDejonghe/iot-lab-complete-python.git"
+  },
+  "dependencies": {
+    "markdown-it": "^13.0.1"
   }
 }
