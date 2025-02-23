@@ -85,11 +85,48 @@ Om de stappenmotor te voeden gebruik je een labovoeding en deze stel je in op 4V
 
 ![example image](./images/time1.png "An exemplary image")
 
-Eerst gaan we fase 1 hoog maken en al de andere fasen laag. Vervolgens wordt fase 2 hoog gemaakt
-en alle andere fasen laag. Zo gaan we een cyclus maken zodat ieder fase eens hoog wordt terwijl alle
-andere fasen laag zijn.
+Eerst gaan we fase 1 hoog maken en al de andere fasen laag. Vervolgens wordt fase 2 hoog gemaakt en alle andere fasen laag. Zo gaan we een cyclus maken zodat ieder fase eens hoog wordt terwijl alle andere fasen laag zijn.
 Iedere keer er een andere index wordt uitgevoerd zal de stappenmotor een klein stapje verdraaien.
 Door de tijd van de index aan te passen zal de stappenmotor vlugger of trager draaien.
-Door de indexen oplopend (= 1,2,3,4, …) uit te voeren zal de stappenmotor in wijzerszin draaien.
-Door de indexen aflopend (= 4,3,2,1, …) uit te voeren zal de stappenmotor in tegenwijzerszin draaien.
-In Figuur 34 is een samenvatting gemaakt van de 4 verschillende indexen.
+Door de indexen oplopend (= 1,2,3,4, …) uit te voeren zal de stappenmotor in wijzerszin draaien. Door de indexen aflopend (= 4,3,2,1, …) uit te voeren zal de stappenmotor in tegenwijzerszin draaien.
+In de figuur is een samenvatting gemaakt van de 4 verschillende indexen.
+
+![example image](./images/tabel.png "An exemplary image")
+
+### Opdracht: Aansturen van een stappenmotor
+
+<div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
+<p style="color:lightgreen; margin:10px">
+Opdracht: Aansturen van een stappenmotor.
+<ul style="color: white;">
+<li>Bouw de schakeling met ULN2803 en stappenmotor.</li>
+<li>Controleer de werkspanning van de stappenmotor en gebruikt een externe DC-bron.</li>
+<li>Zorg voor volgende toestanden van de motor: Links draaiend, rechts draaiend en stoppen.</li>
+<li>SW1: toggled tussen starten en stoppen van de motor.</li>
+<li>SW2: toggled tussen links en rechts draaiend.</li>
+<li>Met de potentiometer wordt de snelheid geregeld van de stappenmotor.</li>
+<li>Toon de werking aan de docent.</li>
+</ul>
+</p>
+</div>
+
+### Stappenmotor in alternate mode (groter koppel)
+
+Als we een groter koppel willen, dan gaan we de fasen wat overlappend aansturen zodat er op ieder moment twee fasen aangestuurd zijn. Dit noemen we de alternate mode waarvan het tijdvolgordediagram is weergegeven in de volgende figuur.
+
+![example image](./images/time2.png "An exemplary image")
+
+In de volgende figuur is een samenvatting gemaakt van de 4 verschillende indexen. De snelheid en de draairichting wijzigen is identiek als in de normale mode.
+
+![example image](./images/tabel2.png "An exemplary image")
+
+### Stappenmotor in advanced mode
+
+Om de motor nog vloeiender te laten draaien is er de advanced mode. Een volledige cyclus bestaat uit 8 verschillende indexen in plaats van de 4 verschillende indexen zoals bij de normale en alternate mode.
+Het tijdvolgordediagram is weergegeven in de volgende figuur.
+
+![example image](./images/tabel3.png "An exemplary image")
+
+In de volgende figuur is een samenvatting gemaakt van de 4 verschillende indexen. De snelheid en de draairichting wijzigen is identiek als in de normale mode.
+
+![example image](./images/tabel5.png "An exemplary image")
