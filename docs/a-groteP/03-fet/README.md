@@ -26,5 +26,41 @@ Wij vinden in het data-blad ook de transfertkarakteristiek. Een transfertkarakte
 
 Wij gaan de MOSFET aansturen met de ESP32 waarbij de spanning op de uitgang bij een logisch 1 gelijk is aan 3,3V. Als we in de transfertkarakteristiek kijken dan is de maximale stroom door de MOSFET gelijk aan 11A zoals in het groen in de vorige figuur is weergegeven.
 
-Wij gaan een ledstrip (64LED-IP20-2700 van Integratech) aansturen met een lengte van 25cm die een vermogen heeft van 2,8W per meter waarbij de werkspanning gelijk is aan 24V. De 24V spanning van de ledstrip is zeker niet te hoog want de IRL540 kan een spanning schakelen van 50V (=UDSmax). De te gebruiken ledstrip heeft een vermogen van ongeveer 700mW
+Wij gaan een ledstrip (64LED-IP20-2700 van Integratech) aansturen met een lengte van 25cm die een vermogen heeft van 2,8W per meter waarbij de werkspanning gelijk is aan 24V. De 24V spanning van de ledstrip is zeker niet te hoog want de IRL540 kan een spanning schakelen van 50V (=UDSmax). De te gebruiken ledstrip heeft een vermogen van ongeveer 700mW.
+
+> -  25cm is gelijk aan 0,25m
+> -  2,8W/m . 0,25m = 700mW
+
+De stroom van de ledstrip is gelijk aan:
+
+![example image](./images/form.png "An exemplary image")
+
+We zien dat de stroom kleiner is dan 11A wat wil zeggen dat de led op zijn volledige lichtsterkte zal branden als UGS gelijk is aan 3,3V.
+Om zeker te zijn dat de ledstrip volledig zal branden is het aan te raden om eerst de stroom te meten door de ledstrip door deze rechtstreeks aan te sluiten op een 24V gelijkspanning vooraleer je deze gaat aansluiten via de MOSFET.
+Wij willen de ledstrip dimmen en daarom gaan we gebruik maken van een PWM-uitgang.
+
+## Schema van de MOSFET en de ledstrip
+
+Bouw de schakeling zoals weergegeven in de volgende figuur.
+Gebruik de potentiometer van de ESP-shield en vraag de nodige componenten aan de docent.
+De weerstand R met een waarde van 1MΩ dient als beveiliging tegen statische elektriciteit.
+Behandel de MOSFET met de nodige zorg en kom niet met je handen aan de aansluitingen.
+
+![example image](./images/schema1.png "An exemplary image")
+
+## Opdracht: Leddimmer met een MOSFET
+
+<div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
+<p style="color:lightgreen; margin:10px">
+Opdracht: Leddimmer met een MOSFET.
+<ul style="color: white;">
+<li>Schrijf een programma waarmee je de lichtintensiteit kan regelen van een ledstrip door
+gebruik te maken van een MOSFET die aangestuurd wordt met een PWM-signaal.</li>
+<li>Gebruik voor de aansturing de ESP32-shield en regel de snelheid door gebruik te maken van
+de potentiometer op de shield.</li>
+<li>Laat het resultaat aan de docent zien.</li>
+
+</ul>
+</p>
+</div>
 
