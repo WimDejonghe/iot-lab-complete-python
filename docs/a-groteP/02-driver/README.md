@@ -81,6 +81,10 @@ Om de stappenmotor te voeden gebruik je een labovoeding en deze stel je in op 4V
 
 ![example image](./images/schema.png "An exemplary image")
 
+Hier volgt nog een schema voor een stappenmotor die een werkspanning bezit van 12V.
+
+![example image](./images/step.png "An exemplary image")
+
 ### Stappenmotor in Normale mode
 
 ![example image](./images/time1.png "An exemplary image")
