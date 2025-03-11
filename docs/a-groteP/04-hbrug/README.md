@@ -1,5 +1,7 @@
 # H-brug
 
+![example image](./images/H-bridge.png "An exemplary image")
+
 Microcontrollers worden ook wel gebruikt om motoren aan te sturen die op gelijkstroom werken.
 Deze worden DC-motoren genoemd. Een goede manier om te weten hoe een DC-motor kan worden aangestuurd is kennis te hebben over de werking ervan dat behandeld is in het vak elektronica.
 Een dergelijke motor kent eigenlijk twee parameters.
@@ -7,9 +9,23 @@ De eerste is de snelheid van de motor. De snelheid van een motor wordt uitgedruk
 Een tweede parameter is de draaizin. Als er op de as van de motor wordt gekeken, dan kan de motor in "wijzerzin" draaien (met de wijzers van de klok mee, Clockwise, CW). Of de motor kan in tegenwijzerzin draaien (Counter Clockwise, CCW).
 
 ![example image](./images/motor1.png "An exemplary image")
+![example image](./images/motor.jpg "An exemplary image")
 
 Vanuit de microcontroller moet dus zowel de snelheid worden geregeld als de draaizin.
 De snelheid wordt met een PWM-signaal geregeld.
+
+![example image](./images/dcmotor1.jpg "An exemplary image")
+
+Een DC-motor bestaat uit een stator (stilstaand gedeelte van de motor, behuizing), en een rotor (ronddraaiend gedeelte, rotatieas met spoelen, ook wel anker genoemd).  
+
+![example image](./images/dcmotor2.png "An exemplary image")
+
+>- stator : bestaat uit mangneetpolen. Een magneet bestaat uit twee polen, een Noord- en een Zuid-pool. Beide polen worden tegenover elkaar geplaatst binnen de behuizing van de motor. Er is dus een mangnetisch veld in het midden van de motor.
+>- rotor : in dit magnetisch veld worden elektrische geleiders voorzien op de rotor. De geleiders liggen in lussen. Indien door een lus een stroom wordt gestuurd, dan ontstaat er op de geleiders van die lus twee krachten (Lorentzkracht). Die twee krachten zijn tegengesteld aan elkaar en vormen een koppel aan krachten. Dit koppel zorgt voor een roterende beweging van de lus. Als dit koppelkrachten groot genoeg is, dan ontstaat een draaibeweging.
+>- commutator : via sleepringen of koolborstels kan de elektrische spanning op het roterende anker met de lussen worden aangesloten.  
+
+![example image](./images/Electric_motor.gif "An exemplary image")
+
 De draaizin kan worden omgekeerd door de twee aansluitdraden op de motor om te wisselen zoals in de volgende figuur is afgebeeld.
 
 ![example image](./images/motor2.png "An exemplary image")
@@ -76,3 +92,38 @@ Hoe hoger de duty-cycle, hoe meer het signaal op ingang 1A hoog zal zijn en hoe 
 
 ![example image](./images/draaizin.png "An exemplary image")
 
+In de volgende figuur laten we de motor in tegenwijzerszin draaien en laten we de snelheid regelen.
+We laten de motor in tegenwijzerszin draaien door de ingang 2A hoog (=Vcc1=3,3V) te maken.
+Als het PWM-signaal laag is dan zien we aan de linkse figuur dat de motor in tegenwijzerszin draait.
+Als het PWM-signaal hoog is dan zien we aan de rechtse figuur dat de motor niet zal draaien omdat op beide klemmen dezelfde spanning is aangesloten, namelijk de voedingsspanning van de motor.
+Hoe hoger de duty-cycle, hoe minder het signaal op ingang 1A hoog zal zijn en hoe trager de motor zal draaien. De duty-cycle is dan omgekeerd evenredig met de snelheid waarmee we rekening moeten houden in de software.
+
+![example image](./images/draaizin2.png "An exemplary image")
+
+Om de draaizin en de snelheid te bepalen zijn hiervoor twee output pinnen per motor nodig van de microcontroller, bijvoorbeeld pin 2 en 7.
+De draaizin van de motoren wordt bepaald met een digitale uitgang die we aan 2A en 4A aansluiten.
+De snelheid van de motoren wordt bepaald met een PWM-uitgang die we aan 1A en 3A aansluiten.
+
+![example image](./images/schema.png "An exemplary image")
+
+## Draairichting en snelheid regelen van een DC-motor met een microcontroller.
+
+We gaan de richting en de snelheid regelen van een DC-motor door gebruik te maken van een L293D driver, een ESP32 feather va Adafruit en een ESP32-shield.
+Met de trimmer gaan we de snelheid regelen en met de drukknop SW1 de draairichting.
+
+![example image](./images/hardware.png "An exemplary image")
+
+## Opdracht: Aansturen DC motor
+
+<div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
+<p style="color:lightgreen; margin:10px">
+Opdracht: Aansturen van een DCmotor die regelbaar is in snelheid en in draairichting.
+<ul style="color: white;">
+<li>Schrijf een programma waarmee je een DC-motor kan regelen in snelheid door
+gebruik te maken van een L293D die aangestuurd wordt met een PWM-signaal.</li>
+<li>Met een drukknop kan de draairichting geregeld worden.</li>
+<li>Laat het resultaat aan de docent zien.</li>
+
+</ul>
+</p>
+</div>
