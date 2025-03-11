@@ -35,6 +35,13 @@ module.exports = {
           '/a-groteP/05-servo/README.md',
         ]
       },
+      {
+        text: 'WiFi',
+        children: [
+          '/b-wifi/01-wifi/README.md',
+
+        ]
+      },
      
     ],
     sidebarDepth: 1,
