@@ -119,8 +119,7 @@ Met de trimmer gaan we de snelheid regelen en met de drukknop SW1 de draairichti
 <p style="color:lightgreen; margin:10px">
 Opdracht: Aansturen van een DCmotor die regelbaar is in snelheid en in draairichting.
 <ul style="color: white;">
-<li>Schrijf een programma waarmee je een DC-motor kan regelen in snelheid door
-gebruik te maken van een L293D die aangestuurd wordt met een PWM-signaal.</li>
+<li>Schrijf een programma waarmee je een DC-motor kan regelen in snelheid door gebruik te maken van een L293D die aangestuurd wordt met een PWM-signaal.</li>
 <li>Met een drukknop kan de draairichting geregeld worden.</li>
 <li>Laat het resultaat aan de docent zien.</li>
 
