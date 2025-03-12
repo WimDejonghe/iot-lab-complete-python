@@ -39,6 +39,14 @@ module.exports = {
         text: 'WiFi',
         children: [
           '/b-wifi/01-wifi/README.md',
+          '/b-wifi/02-webserver/README.md',
+
+        ]
+      },
+      {
+        text: 'MQTT',
+        children: [
+          '/c-mqtt/01-mqtt/README.md',
 
         ]
       },
