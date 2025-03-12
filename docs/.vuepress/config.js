@@ -47,7 +47,7 @@ module.exports = {
         text: 'MQTT',
         children: [
           '/c-mqtt/01-mqtt/README.md',
-
+          '/c-mqtt/02-esp32/README.md',
         ]
       },
      

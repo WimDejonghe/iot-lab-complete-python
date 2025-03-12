@@ -55,8 +55,8 @@ import time
 import machine
 
 # Wifi-instellingen
-SSID = "MPSK" #Hier komt de SSID van uw WifiAccessPoint
-PASSWORD = "grfecuwp" #Hier komt het wachtwoord voor die accessppint
+SSID = "YOUR_SSID" #Hier komt de SSID van uw WifiAccessPoint
+PASSWORD = "YOUR_PASSWORD" #Hier komt het wachtwoord voor die accessppint
 
 # Verbinden met WiFi
 def connect_wifi():
