@@ -39,8 +39,8 @@ module.exports = {
         text: 'WiFi',
         children: [
           '/b-wifi/01-wifi/README.md',
-          '/b-wifi/02-webserver/README.md',
-
+          '/b-wifi/02-esp32/README.md',
+          '/b-wifi/03-webserver/README.md',
         ]
       },
       {
