@@ -1,12 +1,4 @@
 ---
-author: [Wim Dejonghe]
-description: [Korte introductie MQTT.]
-ms.date: [CREATION/UPDATE DATE - mm/dd/yyyy]
-marp: true
-title: [MQTT]
----
-
----
 mathjax:
   presets: '\def\lr#1#2#3{\left#1#2\right#3}'
 ---
