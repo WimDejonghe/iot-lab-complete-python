@@ -11,14 +11,15 @@ Een eerste voorbeeld code waarbij 2 Leds kunnen worden aangestuurd via een webpa
 ## Sturen van actuatoren
 
 ```python
+#Deze code zal een webserver opzetten die de toestand van GPO pinnen kan aansturen (LEDS dus)
 from machine import Pin
 import network
 import socket
 import time
 
 # Define GPIO pins
-GPIO1 = Pin(22, Pin.OUT)
-GPIO2 = Pin(23, Pin.OUT)
+GPIO1 = Pin(21, Pin.OUT)
+GPIO2 = Pin(14, Pin.OUT)
 
 # Initialize GPIO states
 GPIO1.value(0)  # OFF
@@ -53,6 +54,8 @@ def cnctWifi():
         print( 'Enter this address in browser = ' + status[0] )
 
 #HTML + CSS for webpage
+#The %s within code (body) acts as a placeholder for dynamic content that will be inserted at those positions.
+#The dynamic content here is the status of the GPIOs that will be changed.
 html = """<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,15 +118,24 @@ html = """<!DOCTYPE html>
 cnctWifi()
     
 # Set up socket for web server
+#Retrieves address information for ‘0.0.0.0’ (which typically means listen on all available interfaces)
+#on port 80 and stores it in the addr variable.
 addr = socket.getaddrinfo('0.0.0.0', 80)[0][-1]
+#Creates a new socket and assigns it to the variable s
 s = socket.socket()
+#Sets the socket to non-blocking mode, meaning it won’t block the program’s execution while waiting for operations.
 s.setblocking(0)
+#Binds the socket to the address specified in the addr variable (in this case, ‘0.0.0.0’ on port 80).
 s.bind(addr)
+#Configures the socket to listen for incoming connections with a backlog of 1, allowing the server to accept one connection at a time.
 s.listen(1)
 
 print('listening on', addr)
 
 # Main loop for handling client requests
+#An infinite while loop maintains a connection to Wi-Fi and does client request handling.
+#Each time the loop runs, it first checks if the Wi-Fi connection is active.
+#If not, it makes attempts to reconnect.
 while True:
     if not wlan.isconnected():
         print("Connection failed. Trying to reconnect")
@@ -131,17 +143,40 @@ while True:
         cnctWifi()
     if wlan.isconnected():
         try:
+            #Accepts an incoming connection (s.accept()).
+            #cl is a new socket object representing the connection.
+            #addr is the address of the client.
             cl, addr = s.accept()
             print('client connected from', addr)
+            #Receives the client’s request data (up to 1024 bytes) and prints it in the shell of the IDE.
             request = cl.recv(1024)
             print(request)
-
+            #Converts the request to a string. De request is het GET statement
             request = str(request)
+            #Uses the find method to locate specific patterns in the request string, indicating GPIO control commands.
+            print('De request ziet er zo uit: ', request)
             GPIO1_on = request.find('/GPIO1/on')
             GPIO1_off = request.find('/GPIO1/off')
             GPIO2_on = request.find('/GPIO2/on')
             GPIO2_off = request.find('/GPIO2/off')
+            print('GPIO1/2_on/off zijn van het type: ',type(GPIO1_on))
+            print('GPIO1_on = ', GPIO1_on)
+            print('GPIO1_off = ',GPIO1_off)
+            print('GPIO2_on = ', GPIO2_on)
+            print('GPIO2_off = ',GPIO2_off)
+            #Checks if specific patterns indicating GPIO state changes are found.
+            #GET /GPIO1/on HTTP/1.1
+            #Host: 192.168.1.100
+            #User-Agent: Mozilla/5.0 .....
+            """
+            De eerste regel van de request bevat:
+            *GET (3 tekens)
+            *Spatie (1 teken)
+            */GPIO1/on => begint dus op index 4.
+            In sommige omgevingen (zoals MicroPython) worden extra tekens (zoals een 'b' voor byte-string representatie) toegevoegd bij het printen, waardoor de werkelijke index met 2 extra tekens kan verschuiven, wat in totaal 6 oplevert.
+            """
 
+            #Waarom 6 => find geeft de index weer waar dit gevonden is. Dit is steeds hier 6
             if GPIO1_on == 6:
                 print("GPIO 1 is on")
                 GPIO1.value(1)
@@ -161,7 +196,9 @@ while True:
                 print("GPIO 2 is off")
                 GPIO2.value(0)
                 GPIO2_state = "GPIO 2 is OFF"
-
+            #prepare HTTP response
+            #Prepares an HTTP response using the HTML template (html) with dynamic content replaced by GPIO states.
+            #These variables will update the %s placeholders as discussed earlier.
             response = html % (GPIO1_state, GPIO2_state)
             cl.send('HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n')
             cl.send(response)
