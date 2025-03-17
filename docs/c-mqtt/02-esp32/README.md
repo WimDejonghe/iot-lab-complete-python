@@ -162,7 +162,7 @@ Er kunnen natuurlijk andere clients gebruikt worden die via MQTT geabonneerd zij
 > - Grafana webtool
 > - Op Smartphone toestellen Android of Apple phones kan gebruik worden via de store om verschillende MQTT clients (dashboards) te installeren. Zo kan er voor Android gebruik gemaakt worden van "Linear MQTT dashboard" of van "IoT MQTT Panel" en nog andere. Voor Apple bestaat ook "IoTOnOff" en ook andere.
 
-## Opdrachten:
+## Opdracht1:
 
 <div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
 <p style="color:lightgreen; margin:10px">
@@ -174,6 +174,8 @@ Opdracht: Maak een volledige opstelling waarbij je de ESP32 en zijn shield kan v
 </ul>
 </p>
 </div>
+
+## Opdracht2:
 
 <div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
 <p style="color:lightgreen; margin:10px">
