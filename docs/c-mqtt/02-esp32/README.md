@@ -160,7 +160,11 @@ Er kunnen natuurlijk andere clients gebruikt worden die via MQTT geabonneerd zij
 > - ESP32 of een andere microcontroller
 > - Python scripts op PC, Rpi, of ander
 > - Grafana webtool
-> - Op Smartphone toestellen Android of Apple phones kan gebruik worden via de store om verschillende MQTT clients (dashboards) te installeren. Zo kan er voor Android gebruik gemaakt worden van "Linear MQTT dashboard" of van "IoT MQTT Panel" en nog andere. Voor Apple bestaat ook "IoTOnOff" en ook andere.
+> - Op Smartphone toestellen Android of Apple phones kan gebruik worden via de store om verschillende MQTT clients (dashboards) te installeren. Zo kan er voor Android en Apple gebruik gemaakt worden van "IoT MQTT Panel".
+
+:::warning
+Op de smartphone app moet er voor gezorgd worden dat het network protocol ingesteld worden op TCP-SSL !!!
+:::
 
 ## Opdracht1:
 
