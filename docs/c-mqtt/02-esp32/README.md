@@ -183,7 +183,7 @@ Opdracht: Maak een volledige opstelling waarbij je de ESP32 en zijn shield kan v
 
 <div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
 <p style="color:lightgreen; margin:10px">
-Opdracht: NodeRed dashboard, alles van de esp32 shield op 1 dashboard.
+Opdracht: NodeRed dashboard, alles van de esp32 shield op 1 dashboard, via MQTT.
 <ul style="color: white;">
 <li>Alle 8 Leds zijn bedienbaar vanaf de Node-Red dashboard.</li>
 <li>De 4 drukknoppen zijn gevisualiseerd op de Node-Red dashboard.</li>
