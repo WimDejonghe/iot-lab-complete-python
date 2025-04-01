@@ -104,3 +104,43 @@ time.sleep(2)  # Wacht even voor stabiliteit
 get_brussels_time()
 ```
 
+## Opdrachten: 
+### Opdracht1 : WiFi scan
+
+<div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
+<p style="color:lightgreen; margin:10px">
+Opdracht: Maak een programma die uw esp32 laten scannen naar beschikbare SSID's.
+<ul style="color: white;">
+<li>Geef alle SSID acces points weer in de console.</li>
+<li>Geef ook de signaalsterkte (decibell) weer.</li>
+<li>Zoek op wat die dB waarden willen zeggen (wat is een goede signaalsterkte en wat niet).</li>
+</ul>
+</p>
+</div>
+
+### Opdracht2 : WiFi SSID connect Fixed IP
+
+<div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
+<p style="color:lightgreen; margin:10px">
+Opdracht: Connecteer uw esp32 met een SSID en geef uw esp32 een fixed adres.
+<ul style="color: white;">
+<li>Connecteer met een SSID en geef client een fixed IP adres.</li>
+<li>Zorg dat je de tijd kunt opvragen aan een time server op het internet.</li>
+<li>Geef de tijd weer in de console.</li>
+</ul>
+</p>
+</div>
+
+### Opdracht3 : WiFi SSID connect Dynamic IP
+
+<div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
+<p style="color:lightgreen; margin:10px">
+Opdracht: Connecteer uw esp32 met een SSID en geef uw esp32 een dynamic adres (DHCP).
+<ul style="color: white;">
+<li>Connecteer met een SSID en geef client een dynamic IP adres.</li>
+<li>Display uw IP gegevens op de console.</li>
+<li>Zorg dat je de tijd kunt opvragen aan een time server op het internet.</li>
+<li>Geef de tijd weer in de console.</li>
+</ul>
+</p>
+</div>
