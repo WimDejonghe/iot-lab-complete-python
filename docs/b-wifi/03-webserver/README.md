@@ -321,3 +321,20 @@ while True:
     time.sleep(0.1)
 ```
 
+## Opdracht1:
+
+<div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
+<p style="color:lightgreen; margin:10px">
+Opdracht: Maak een webserver van uw esp32 waarbij outputs kunnen worden bediend.
+
+</p>
+</div>
+
+## Opdracht2:
+
+<div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
+<p style="color:lightgreen; margin:10px">
+Opdracht: Maak een website op de esp32 die de waarde van een sensor visualiseert.
+
+</p>
+</div>
