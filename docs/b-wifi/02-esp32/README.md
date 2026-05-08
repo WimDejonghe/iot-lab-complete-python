@@ -46,8 +46,10 @@ if __name__ == "__main__":
 
 In volgende code wordt de ESP32 geconnecteerd met een WAP (SSID + wachtwoord). Eenmaal geconnecteerd krijgt de ESP32 een IP adres van de DHCP server die aanwezig is in het Wifi. Een alternatief kan zijn dat het device (ESP32) een fixed IP-adres krijgt. Dit moet dan in de code worden geprogrammeerd.
 
-> [!IMPORTANT]  
-> Het werken met een fixed IP wil zeggen dat je de volledige IP configuratie zelf zal moeten hardcoded programmeren. Dis zijn het IP-adres zelf, subnetmask, gateway en DNS. Binnen micropython kan je dit doen met het statement wlan.ifconfig . Zoek daar zelf gegevens van op.
+> :bulb: **Opmerking:**
+:::warning  
+Het werken met een fixed IP wil zeggen dat je de volledige IP configuratie zelf zal moeten hardcoded programmeren. Dis zijn het IP-adres zelf, subnetmask, gateway en DNS. Binnen micropython kan je dit doen met het statement wlan.ifconfig . Zoek daar zelf gegevens van op.
+:::
 
 Verder zal volgende code, eenmaal de WAP connectie is gelukt, de huidige tijd en datum opvragen aan een time-server op het internet.
 
