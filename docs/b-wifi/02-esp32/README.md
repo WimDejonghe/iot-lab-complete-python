@@ -48,7 +48,7 @@ In volgende code wordt de ESP32 geconnecteerd met een WAP (SSID + wachtwoord). E
 
 > :bulb: **Opmerking:**
 :::warning  
-Het werken met een fixed IP wil zeggen dat je de volledige IP configuratie zelf zal moeten hardcoded programmeren. Dis zijn het IP-adres zelf, subnetmask, gateway en DNS. Binnen micropython kan je dit doen met het statement wlan.ifconfig . Zoek daar zelf gegevens van op.
+Het werken met een fixed IP wil zeggen dat je de volledige IP configuratie zelf zal moeten hardcoded programmeren. Dit zijn het IP-adres zelf, subnetmask, gateway en DNS. Binnen micropython kan je dit doen met het statement ´wlan.ifconfig()´ . Zoek daar zelf gegevens van op.
 :::
 
 Verder zal volgende code, eenmaal de WAP connectie is gelukt, de huidige tijd en datum opvragen aan een time-server op het internet.
