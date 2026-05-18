@@ -325,7 +325,7 @@ while True:
 
 <div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
 <p style="color:lightgreen; margin:10px">
-Opdracht: Maak een webserver van uw esp32 waarbij outputs kunnen worden bediend.
+Opdracht: Maak een webserver van uw esp32 waarbij 8 outputs kunnen worden bediend. Leg deze regel code grondig uit: <br> if GPIO1_on == 6. <br> Waarom is dit 6? Waar kan je dit aanduiden?
 
 </p>
 </div>
