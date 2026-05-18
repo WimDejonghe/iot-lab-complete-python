@@ -166,11 +166,13 @@ Er kunnen natuurlijk andere clients gebruikt worden die via MQTT geabonneerd zij
 Op de smartphone app moet er voor gezorgd worden dat het network protocol ingesteld worden op TCP-SSL !!!
 :::
 
+> :bulb: **Opmerking:** Maak steeds een credential aan voor de docent op uw broker met de gebruikersnaam: "docent" en als wachtwoord "vivesiot". Noteer dit samen met de hostnaam in je verslag zodat dit bij uw presentatie kan worden getest.
+
 ## Opdracht1:
 
 <div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
 <p style="color:lightgreen; margin:10px">
-Opdracht: Maak een volledige opstelling waarbij je de ESP32 en zijn shield kan visualiseren op uw smartphone.
+Opdracht: Maak een volledige opstelling waarbij je de ESP32 en zijn shield kan visualiseren op uw smartphone. 
 <ul style="color: white;">
 <li>Alle 8 Leds zijn bedienbaar vanaf uw smartphone App.</li>
 <li>De 4 drukknoppen zijn gevisualiseerd op de smartphone App.</li>
