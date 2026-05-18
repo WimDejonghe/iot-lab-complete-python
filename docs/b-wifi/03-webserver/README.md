@@ -334,7 +334,7 @@ Opdracht: Maak een webserver van uw esp32 waarbij 8 outputs kunnen worden bedien
 
 <div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
 <p style="color:lightgreen; margin:10px">
-Opdracht: Maak een website op de esp32 die de waarde van een sensor visualiseert.
+Opdracht: Maak een website op de esp32 die de waarde van een sensor visualiseert. Dit is statisch. Hoe maak je dit dynamisch? Wat is trouwens statisch versus dynamisch bij een webpagina? Leg grondig uit.
 
 </p>
 </div>
