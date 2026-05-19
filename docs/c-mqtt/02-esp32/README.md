@@ -33,12 +33,9 @@ sw1 = Pin(39, Pin.IN)
 led = Pin(13, Pin.OUT)
 led1 = Pin(21, Pin.OUT)
 
-
-
 def timer_callback(timer):
     global led1
     led1.value(not led1.value())
-
 
 def callback_sw1(p):
     #print('pin change', p)
@@ -48,23 +45,19 @@ def callback_sw1(p):
     client.publish(MQTT_TOPIC_PUB, tekst)
     counter_SW1 = counter_SW1 + 1
 
-
 # Wi-Fi verbinden
 def connect_wifi():
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
     wlan.connect(SSID, PASSWORD)
-
     print("Verbinden met Wi-Fi...")
     while not wlan.isconnected():
         time.sleep(1)
-    
     print("Verbonden! IP-adres:", wlan.ifconfig()[0])
 
 # Callback functie voor ontvangen berichten
 def on_message(topic, msg):
     print(f"Ontvangen: {topic.decode()} -> {msg.decode()}")
-    
     # Hier kan je een actie uitvoeren bij een bepaald bericht
     if msg.decode() == "ping":
         client.publish(MQTT_TOPIC_PUB, "pong")
@@ -73,7 +66,6 @@ def on_message(topic, msg):
 
 # Verbinden met Wi-Fi
 connect_wifi()
-
 # Verbinden met MQTT broker
 context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
 context.verify_mode = ssl.CERT_NONE
@@ -178,7 +170,10 @@ Opdracht: Maak een volledige opstelling waarbij je de ESP32 en zijn shield kan v
 <li>De 4 drukknoppen zijn gevisualiseerd op de smartphone App.</li>
 <li>De positie van de potentiometer wordt gevisualiseerd op de smartphone App.</li>
 </ul>
+
 </p>
+<p>Je zorgt er best voor dat de potentiometer een lage resolutie bezit. Zo vermijd je dat er constant een waarde wordt doorgestuurd ook al is de potentiometer niet gewijzigd van waarde. </p>
+<p>Neem bijvoorbeeld 10 verschillende segmenten tussen 0 en max.</p>
 </div>
 
 ## Opdracht2:
