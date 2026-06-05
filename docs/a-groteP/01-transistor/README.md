@@ -242,7 +242,8 @@ schakelaar.
 Opdracht: Transistor als schakelaar.
 <ul style="color: white;">
 <li>Bouw de schakeling.</li>
-<li>Schrijf een programma voor de microcontroller dat de lamp in een lus 3 seconden laat branden en nadien 3 seconden dooft. Herhaal het programma in een oneindige lus.</li>
+<li>Maak een schakeling en een programma voor de microcontroller dat een relais aanstuurt. De contacten van het relais schakelt dan een LED (knippert op een ritme van 3 seconden).</li>
+<li>Leg de werking uit van de schakeling aan de hand van berekeningen en een schema.</li>
 <li>Toon de werking aan de docent.</li>
 </ul>
 </p>
