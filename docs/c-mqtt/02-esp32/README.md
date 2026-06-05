@@ -172,9 +172,14 @@ Opdracht: Maak een volledige opstelling waarbij je de ESP32 en zijn shield kan v
 </ul>
 
 </p>
-<p>Je zorgt er best voor dat de potentiometer een lage resolutie bezit. Zo vermijd je dat er constant een waarde wordt doorgestuurd ook al is de potentiometer niet gewijzigd van waarde. </p>
-<p>Neem bijvoorbeeld 10 verschillende segmenten tussen 0 en max.</p>
+<p style="color: white;">Je zorgt er best voor dat de potentiometer een lage resolutie bezit. Zo vermijd je dat er constant een waarde wordt doorgestuurd ook al is de potentiometer niet gewijzigd van waarde. </p>
+<p style="color: white;">Neem bijvoorbeeld 10 verschillende segmenten tussen 0 en max.</p>
+<p style="color: white;">Het is ook niet nodig om heel snel nieuwe data van de potentiometer door te sturen. Je kan dit met een Timer instellen dat die maar per seconde een update uitvoert.</p>
 </div>
+
+:::warning
+Binnen Node-Red is het noodzakelijk om de functie "Use TLS" aan te vinken. Controleer ook binnen TLS config dat "Verify server certificate" aan staat!!!
+:::
 
 ## Opdracht2:
 
