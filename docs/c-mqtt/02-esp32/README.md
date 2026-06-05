@@ -164,7 +164,7 @@ Op de smartphone app moet er voor gezorgd worden dat het network protocol ingest
 
 <div style="background-color:darkgreen; text-align:left; vertical-align:left; padding:15px;">
 <p style="color:lightgreen; margin:10px">
-Opdracht: Maak een volledige opstelling waarbij je de ESP32 en zijn shield kan visualiseren op uw smartphone. 
+Opdracht: Maak een volledige opstelling waarbij je de ESP32 en zijn shield kan visualiseren op uw smartphone gebruikmakend van MQTT. 
 <ul style="color: white;">
 <li>Alle 8 Leds zijn bedienbaar vanaf uw smartphone App.</li>
 <li>De 4 drukknoppen zijn gevisualiseerd op de smartphone App.</li>
