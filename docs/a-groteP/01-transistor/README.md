@@ -241,7 +241,7 @@ schakelaar.
 <p style="color:lightgreen; margin:10px">
 Opdracht: Transistor als schakelaar.
 <ul style="color: white;">
-<li>Bouw de schakeling.</li>
+<li>Bouw volgende schakeling.</li>
 <li>Maak een schakeling en een programma voor de microcontroller dat een relais aanstuurt. De contacten van het relais schakelt dan een LED (knippert op een ritme van 3 seconden).</li>
 <li>Leg de werking uit van de schakeling aan de hand van berekeningen en een schema.</li>
 <li>Toon de werking aan de docent.</li>
