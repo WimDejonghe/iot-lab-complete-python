@@ -54,10 +54,7 @@ Behandel de MOSFET met de nodige zorg en kom niet met je handen aan de aansluiti
 <p style="color:lightgreen; margin:10px">
 Opdracht: Leddimmer met een MOSFET.
 <ul style="color: white;">
-<li>Schrijf een programma waarmee je de lichtintensiteit kan regelen van een ledstrip door
-gebruik te maken van een MOSFET die aangestuurd wordt met een PWM-signaal.</li>
-<li>Gebruik voor de aansturing de ESP32-shield en regel de snelheid door gebruik te maken van
-de potentiometer op de shield.</li>
+<li>Schrijf een programma waarmee je de lichtintensiteit en kleurcombinaties kan regelen van een RGB-ledstrip door gebruik te maken van een MOSFET's die aangestuurd worden met een PWM-signalen.</li>
 <li>Laat het resultaat aan de docent zien.</li>
 
 </ul>
